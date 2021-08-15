@@ -1,0 +1,7 @@
+-write html code and extract the components and leave the slider part out *
+-write css code starting from general style to more specific for mobile 
+-add the dropdown functionailty 
+-write the media query for the desktop layout
+-now you have a complete version but without the slider
+-build the slider and make it compatiable with the mobile and the desktop layout
+by resizing the amount of cards shown but the functional code is the same
