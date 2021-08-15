@@ -1,3 +1,12 @@
+//colors
+
+$Bright-Red: hsl(12, 88%, 59%);
+$Dark-Blue: hsl(228, 39%, 23%);
+$Dark-Grayish-Blue: hsl(227, 12%, 61%);
+$Very-Dark-Blue: hsl(233, 12%, 13%);
+$Very-Pale-Red: hsl(13, 100%, 96%);
+$Vary-Light-Gray: hsl(0, 0%, 98%);
+
 //reset
 
 * {
@@ -8,4 +17,403 @@
 
 body {
   min-height: 100vh;
+  font-family: "Be Vietnam";
+  background-image: url(./imgs/bg-tablet-pattern.svg),
+    url(./imgs/bg-tablet-pattern.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 120%, 120%;
+  background-position: 50px -100px, 250px 500px;
+}
+//general styles
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input:focus {
+  outline: none;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button,
+input {
+  font-size: 1rem;
+  font-family: "Be Vietnam";
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+i {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+h1 {
+  color: $Dark-Blue;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+h2,
+h3 {
+  color: $Dark-Blue;
+}
+
+p {
+  color: $Dark-Grayish-Blue;
+  line-height: 1.6;
+}
+
+.container {
+  padding: 0rem 1.5rem;
+}
+
+.main-btn {
+  background-color: $Bright-Red;
+  padding: 0.8em 2em;
+  border-radius: 30px;
+  font-weight: 600;
+  color: $Vary-Light-Gray;
+}
+
+.hidden {
+  display: none !important;
+}
+
+//nav
+
+nav {
+  z-index: 1;
+  position: relative;
+  margin: 2rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $Dark-Blue;
+  & .main-btn {
+    display: none;
+  }
+  & i {
+    color: $Dark-Blue;
+  }
+}
+
+.desktop-nav {
+  display: none;
+}
+
+//header
+
+header {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  margin-bottom: 4rem;
+  gap: 1rem;
+}
+
+.header__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+//about
+
+.about__title {
+  text-align: center;
+}
+
+.about__list {
+  margin: 3rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.about__list__item {
+  & span {
+    font-size: 0.8rem;
+  }
+  & h3 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: hsl(13, 100%, 96%);
+    padding: 0rem 0.5rem;
+    border-radius: 30px;
+  }
+
+  & p {
+    padding: 1rem;
+  }
+}
+
+.list__item-number-desktop {
+  display: none;
+}
+
+//reviews
+
+.reviews {
+  margin: 3rem 0rem;
+  text-align: center;
+}
+
+.slider {
+  margin: 4rem auto;
+}
+
+.slider__item {
+  margin: 6rem 0rem;
+  background-color: $Vary-Light-Gray;
+  & img {
+    transform: translateY(-50%);
+    display: block;
+    height: 70px;
+    width: 70px;
+    margin: auto;
+  }
+  & h3 {
+    margin-top: -1.5rem;
+  }
+  & p {
+    padding: 1.5rem;
+  }
+}
+
+.slider__btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0rem;
+  cursor: pointer;
+}
+
+.slider__btn {
+  border: 1px solid #f25f3a;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+}
+
+.slider__item--selected {
+  background-color: $Bright-Red;
+}
+
+//simplify
+
+.simplify {
+  background-image: url(./imgs/bg-simplify-section-mobile.svg);
+  background-repeat: no-repeat;
+  padding: 6rem 3rem;
+  text-align: center;
+  background-size: 20%;
+  background-position: left;
+  background-color: #f25f3a;
+
+  & h2 {
+    color: $Vary-Light-Gray;
+  }
+
+  & button {
+    color: $Bright-Red;
+    background-color: $Vary-Light-Gray;
+  }
+}
+
+//footer
+
+footer {
+  padding: 4rem 1.5rem;
+  background-color: $Very-Dark-Blue;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  grid-gap: 2rem;
+  align-items: center;
+  & ul {
+    color: $Vary-Light-Gray;
+  }
+  & path {
+    fill: $Vary-Light-Gray;
+  }
+
+  & form {
+    display: flex;
+    gap: 0.5rem;
+    & input {
+      background-color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 0.8em 1em;
+    }
+  }
+  & p {
+    font-size: 0.8rem;
+  }
+}
+
+.footer__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  & > *:hover {
+    color: $Bright-Red;
+  }
+}
+
+.social-media-icons {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+//style for the dropdown menu
+
+.mobile-nav-container {
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(to top, #000000bf, transparent);
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  align-items: baseline;
+}
+
+.mobile-nav {
+  color: $Dark-Blue;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+//media query
+
+@media screen and (min-width: 1000px) {
+  //general
+  body {
+    background-size: 50%, 50%;
+    background-position: 140% -200px, -60% 750px;
+  }
+  .container {
+    padding: 0 10%;
+  }
+  //nav
+  .desktop-nav {
+    display: flex;
+    font-weight: 500;
+    gap: 1rem;
+  }
+
+  nav .nav-btns {
+    display: none;
+  }
+
+  nav .main-btn {
+    display: block;
+  }
+  //header
+  header {
+    margin-top: 5rem;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  .header__text {
+    align-items: baseline;
+    gap: 2rem;
+  }
+  //about
+  .about {
+    display: flex;
+    gap: 5rem;
+    margin-bottom: 5rem;
+  }
+  .about__title {
+    text-align: left;
+  }
+  .about__list {
+    margin: 0;
+  }
+  .about__list__item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: baseline;
+  }
+  .about__list__item h3 {
+    background-color: inherit;
+  }
+  .list__item-number-desktop {
+    display: inline-block;
+  }
+  .list__item-number-mobile {
+    display: none;
+  }
+  //
+  .slider {
+    width: 60%;
+  }
+
+  //simplify
+  .simplify {
+    background-image: url("./imgs/bg-simplify-section-desktop.svg");
+    background-size: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .form {
+    grid-area: form;
+  }
+  .sm {
+    grid-area: sm;
+  }
+  .copy-right {
+    grid-area: cop;
+  }
+  .list {
+    grid-area: lis;
+  }
+  .logo {
+    grid-area: logo;
+  }
+  //footer
+  footer {
+    padding: 4rem 10%;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    grid-template-areas:
+      "logo lis lis form"
+      "sm lis lis cop";
+  }
 }
